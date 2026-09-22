@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Flashcard Quiz App</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <header>
+ <h1>Flashcard Quiz App</h1>
+ <p>Create, study, edit, and save your flashcards.</p>
+ </header>
+
+ <main class="container">
+
+ <section class="flashcard-section">
+ <div class="flashcard">
+ <h2 id="question">Loading flashcard...</h2>
+ <p id="answer" class="hidden"></p>
+
+ <button id="showAnswerBtn">Show Answer</button>
+ </div>
+
+ <p id="cardCounter">Card 0 of 0</p>
+
+ <div class="navigation-buttons">
+ <button id="previousBtn">Previous</button>
+ <button id="nextBtn">Next</button>
+ </div>
+ </section>
+
+ <section class="form-section">
+ <h2 id="formTitle">Add New Flashcard</h2>
+
+ <form id="flashcardForm">
+ <label for="questionInput">Question</label>
+ <textarea
+ id="questionInput"
+ placeholder="Enter your question"
+ required
+ ></textarea>
+
+ <label for="answerInput">Answer</label>
+ <textarea
+ id="answerInput"
+ placeholder="Enter the answer"
+ required
+ ></textarea>
+
+ <div class="form-buttons">
+ <button type="submit" id="saveBtn">Add Flashcard</button>
+ <button type="button" id="cancelBtn" class="hidden">Cancel Edit</button>
+ </div>
+ </form>
+ </section>
+
+ <section class="list-section">
+ <h2>Your Flashcards</h2>
+ <div id="flashcardList"></div>
+ </section>
+
+ </main>
+
+ <footer>
+ <p>© 2026 Flashcard Quiz App | CodeAlpha Internship Project</p>
+ </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
