@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Fitness Tracker App</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="app-container">
+ <h1>Fitness Tracker</h1>
+
+ <!-- Summary / Dashboard -->
+ <section class="dashboard">
+ <h2>Today's Summary</h2>
+ <div class="stats-grid">
+ <div class="stat-card">
+ <h3>Steps</h3>
+ <p id="totalSteps">0</p>
+ </div>
+ <div class="stat-card">
+ <h3>Workouts</h3>
+ <p id="totalWorkouts">0</p>
+ </div>
+ <div class="stat-card">
+ <h3>Calories</h3>
+ <p id="totalCalories">0</p>
+ </div>
+ </div>
+
+ <h2>Weekly Progress</h2>
+ <div class="progress-bar-container">
+ <div id="weeklyProgress" class="progress-bar"></div>
+ </div>
+ <p id="weeklyProgressText">0 / 7 days active</p>
+ </section>
+
+ <!-- Log activity form -->
+ <section class="log-section">
+ <h2>Log Activity</h2>
+ <form id="activityForm">
+ <label for="activityType">Activity Type</label>
+ <select id="activityType" required>
+ <option value="walking">Walking</option>
+ <option value="running">Running</option>
+ <option value="cycling">Cycling</option>
+ <option value="gym">Gym / Strength</option>
+ <option value="other">Other</option>
+ </select>
+
+ <label for="duration">Duration (minutes)</label>
+ <input type="number" id="duration" min="1" required />
+
+ <label for="calories">Calories Burned</label>
+ <input type="number" id="calories" min="0" required />
+
+ <label for="steps">Steps (optional)</label>
+ <input type="number" id="steps" min="0" value="0" />
+
+ <button type="submit">Add Activity</button>
+ </form>
+ </section>
+
+ <!-- Activity list -->
+ <section class="activities-section">
+ <h2>Recent Activities</h2>
+ <ul id="activitiesList"></ul>
+ <button id="clearDataBtn">Clear All Data</button>
+ </section>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
