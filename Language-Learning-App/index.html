@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Language Learning App</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="app-container">
+ <header>
+ <h1>LinguaLearn</h1>
+ <p>Learn new Spanish words every day</p>
+ </header>
+
+ <section class="progress-section">
+ <div class="progress-header">
+ <h2>Your Progress</h2>
+ <span id="progressText">0 / 0 learned</span>
+ </div>
+
+ <div class="progress-container">
+ <div id="progressBar" class="progress-bar"></div>
+ </div>
+ </section>
+
+ <section class="category-section">
+ <h2>Choose a Category</h2>
+
+ <div class="category-buttons">
+ <button class="category-btn active" data-category="all">All</button>
+ <button class="category-btn" data-category="greetings">Greetings</button>
+ <button class="category-btn" data-category="food">Food</button>
+ <button class="category-btn" data-category="travel">Travel</button>
+ <button class="category-btn" data-category="grammar">Grammar</button>
+ </div>
+ </section>
+
+ <section class="flashcard-section">
+ <h2>Daily Flashcard</h2>
+
+ <div class="flashcard" id="flashcard">
+ <p class="category-label" id="wordCategory">Category</p>
+ <h3 id="foreignWord">Hola</h3>
+ <p id="translation">Hello</p>
+ <p id="exampleSentence"></p>
+
+ <button id="pronounceBtn">🔊 Hear Pronunciation</button>
+ </div>
+
+ <div class="flashcard-actions">
+ <button id="previousBtn">← Previous</button>
+ <button id="learnedBtn" class="learned-btn">Mark as Learned</button>
+ <button id="nextBtn">Next →</button>
+ </div>
+ </section>
+
+ <section class="quiz-section">
+ <h2>Quick Quiz</h2>
+
+ <div id="quizBox">
+ <p id="quizQuestion">Click Start Quiz to test yourself.</p>
+ <div id="quizOptions" class="quiz-options"></div>
+
+ <button id="startQuizBtn">Start Quiz</button>
+ <p id="quizResult"></p>
+ </div>
+ </section>
+
+ <section class="learned-section">
+ <h2>Learned Words</h2>
+ <ul id="learnedWordsList"></ul>
+ <button id="resetProgressBtn" class="reset-btn">Reset Progress</button>
+ </section>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>

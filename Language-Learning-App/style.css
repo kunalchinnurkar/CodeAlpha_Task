@@ -1,0 +1,248 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Arial, sans-serif;
+}
+
+body {
+ min-height: 100vh;
+ background: linear-gradient(135deg, #6a11cb, #2575fc);
+ padding: 20px;
+}
+
+.app-container {
+ max-width: 850px;
+ margin: 0 auto;
+ background: #ffffff;
+ border-radius: 18px;
+ padding: 30px;
+ box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+header {
+ text-align: center;
+ margin-bottom: 30px;
+}
+
+header h1 {
+ color: #3d2c8d;
+ font-size: 34px;
+ margin-bottom: 8px;
+}
+
+header p {
+ color: #666;
+}
+
+h2 {
+ color: #333;
+ margin: 25px 0 15px;
+}
+
+/* Progress */
+.progress-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.progress-container {
+ width: 100%;
+ height: 18px;
+ background: #e5e5e5;
+ border-radius: 20px;
+ overflow: hidden;
+}
+
+.progress-bar {
+ width: 0%;
+ height: 100%;
+ background: linear-gradient(90deg, #6a11cb, #2575fc);
+ transition: width 0.3s ease;
+}
+
+/* Categories */
+.category-buttons {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+
+.category-btn {
+ border: none;
+ padding: 10px 14px;
+ border-radius: 20px;
+ background: #eeeeee;
+ color: #333;
+ cursor: pointer;
+ font-size: 14px;
+}
+
+.category-btn:hover,
+.category-btn.active {
+ background: #6a11cb;
+ color: white;
+}
+
+/* Flashcards */
+.flashcard {
+ background: #f7f4ff;
+ border: 2px solid #d9ccff;
+ border-radius: 14px;
+ padding: 35px 20px;
+ text-align: center;
+ margin-top: 10px;
+}
+
+.category-label {
+ display: inline-block;
+ background: #6a11cb;
+ color: white;
+ padding: 5px 12px;
+ border-radius: 15px;
+ font-size: 12px;
+ margin-bottom: 15px;
+ text-transform: capitalize;
+}
+
+.flashcard h3 {
+ font-size: 36px;
+ color: #3d2c8d;
+ margin-bottom: 12px;
+}
+
+.flashcard #translation {
+ font-size: 22px;
+ color: #333;
+ margin-bottom: 12px;
+}
+
+#exampleSentence {
+ color: #666;
+ font-style: italic;
+ margin-bottom: 18px;
+}
+
+button {
+ border: none;
+ border-radius: 8px;
+ padding: 11px 16px;
+ background: #6a11cb;
+ color: white;
+ cursor: pointer;
+ font-size: 15px;
+ transition: 0.25s;
+}
+
+button:hover {
+ background: #4d0c99;
+ transform: translateY(-2px);
+}
+
+.flashcard-actions {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 12px;
+ margin-top: 18px;
+}
+
+.learned-btn {
+ background: #16a34a;
+}
+
+.learned-btn:hover {
+ background: #12833c;
+}
+
+/* Quiz */
+.quiz-section {
+ margin-top: 35px;
+}
+
+#quizBox {
+ background: #f8f8f8;
+ border-radius: 12px;
+ padding: 22px;
+}
+
+#quizQuestion {
+ font-size: 18px;
+ font-weight: bold;
+ color: #333;
+ margin-bottom: 18px;
+}
+
+.quiz-options {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 10px;
+ margin-bottom: 18px;
+}
+
+.quiz-option {
+ background: #2575fc;
+}
+
+.quiz-option:hover {
+ background: #1459c6;
+}
+
+#quizResult {
+ margin-top: 15px;
+ font-weight: bold;
+ color: #333;
+}
+
+/* Learned words */
+.learned-section {
+ margin-top: 35px;
+}
+
+#learnedWordsList {
+ list-style: none;
+ border: 1px solid #e6e6e6;
+ border-radius: 10px;
+ max-height: 220px;
+ overflow-y: auto;
+ margin-bottom: 15px;
+}
+
+#learnedWordsList li {
+ padding: 12px;
+ border-bottom: 1px solid #eeeeee;
+ color: #333;
+}
+
+#learnedWordsList li:last-child {
+ border-bottom: none;
+}
+
+.reset-btn {
+ background: #e74c3c;
+}
+
+.reset-btn:hover {
+ background: #c0392b;
+}
+
+@media (max-width: 600px) {
+.app-container {
+ padding: 20px;
+ }
+
+.progress-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 8px;
+ }
+
+.quiz-options {
+ grid-template-columns: 1fr;
+ }
+
+.flashcard h3 {
+ font-size: 30px;
+ }
+}
